@@ -136,14 +136,15 @@ helperCat.addEventListener('click', () => {
 
 // Победа/поражение
 function endGame() {
-  if (gameEnded) return;
-  gameEnded = true;
+    if (gameEnded) return;
+    gameEnded = true;
 
-  const totalPossible = document.querySelectorAll('.card').length / 2 * 10;
+    const totalPossible = document.querySelectorAll('.card').length / 2 * 10;
 
-  if (score >= totalPossible / 2) {
-    window.location.href = 'victory.html';
-  } else {
-    window.location.href = 'defeat.html';
+    if (score >= totalPossible / 2) {
+      window.location.href = 'victory.html';
+    } else {
+      window.location.href = 'defeat.html';
+    }
   }
-}
+});
