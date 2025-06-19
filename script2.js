@@ -13,18 +13,18 @@ let gameEnded = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("card-grid");
-  const cardCount = 25; // теперь 25 карточек
+  const cardCount = 25; 
 
   let cards = [];
 
-  // Создаем пары для первых 12 карточек (24 штуки)
+  // пары для первых 12 
   for (let i = 1; i <= 12; i++) {
     const cardImage = `assets/img/карточки/к${i}.png`;
     cards.push({ image: cardImage });
     cards.push({ image: cardImage });
   }
 
-  // Добавляем особую карточку "чашка.png"
+  // непарная карточка (10 очков)
   cards.push({ image: 'assets/img/карточки/чашка.png', special: true });
 
   cards = cards.sort(() => Math.random() - 0.5);
@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Логика переворота и подсчета
+
 function flipCard(card) {
   if (lockBoard || card.classList.contains('flipped')) return;
 
-  // Особая карточка "чашка" — сразу начисляем 10 очков
+
   if (card.dataset.special === 'true') {
     card.classList.add('flipped');
     score += 10;
@@ -131,7 +131,6 @@ hintBtn.addEventListener('click', () => {
 
   setTimeout(() => {
     allCards.forEach(card => {
-      // Убираем класс 'flipped' только у тех, кто НЕ был открыт ДО подсказки
       if (!alreadyFlipped.includes(card)) {
         card.classList.remove('flipped');
       }
@@ -167,7 +166,7 @@ function endGame() {
   }
 }
 
-// Обработка ESC
+
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     window.location.href = 'index_mainscreen.html';
