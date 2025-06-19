@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Выбор сложности</title>
+  <link rel="stylesheet" href="lvl.css">
+</head>
+<body>
+  <div class="game-window">
+    <div class="window-bar">
+      <div class="title">CATMORY</div>
+      <div class="window-buttons">
+        <img src="assets/img/ui/minimize.png" alt="Minimize">
+        <img src="assets/img/ui/close.png" alt="Close">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="difficulty-box">
+        <h1 class="title-text">ВЫБЕРИТЕ СЛОЖНОСТЬ ИГРЫ</h1>
+        <p class="subtitle-text">КОЛИЧЕСТВО КАРТОЧЕК</p>
+
+        <div class="level-buttons">
+          <img id="level-4x4" src="assets/img/ui/4 х 4.png" alt="4x4" class="level-button" style="cursor:pointer;">
+          <img id="level-5x5" src="assets/img/ui/5 х 5.png" alt="5x5" class="level-button" style="cursor:pointer;">
+        </div>
+
+        <p class="exit-text">НАЖМИТЕ ESC, ЧТОБЫ ВЫЙТИ</p>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn4x4 = document.getElementById('level-4x4');
+    const btn5x5 = document.getElementById('level-5x5');
+
+    if (btn4x4) {
+      btn4x4.addEventListener('click', () => {
+        window.location.href = 'index.html';
+      });
+    }
+    if (btn5x5) {
+      btn5x5.addEventListener('click', () => {
+        window.location.href = 'index2.html';
+      });
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      window.location.href = 'index_mainscreen.html';
+    }
+  });
+</script>
+</html>
+

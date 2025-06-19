@@ -1,0 +1,175 @@
+:root {
+  --dark-blue: #162059;
+  --mid-blue: #1a2873;
+  --pink: #f28db2;
+  --light-bg: #d8e0f2;
+  --game-bg: #f2f2f2;
+}
+
+@font-face {
+  font-family: 'CatFont';
+  src: url('assets/fonts/TeletactileRus.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1250px;
+  height: 850px;
+  background-color: var(--game-bg);
+  font-family: 'CatFont', sans-serif;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  border: 1px solid var(--dark-blue);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.window-bar {
+  height: 30px;
+  background-color: var(--mid-blue);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.window-controls img {
+  width: 30px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.game-container {
+  display: flex;
+  padding: 30px;
+  gap: 40px;
+}
+
+.card-grid {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(4, 150px); 
+  grid-gap: 20px; 
+}
+
+.card {
+  width: 150px;    
+  height: 150px;    
+  perspective: 600px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-front img,
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* убрать отступы */
+}
+
+/* Правая панель */
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.timer-block {
+  margin-top: 35px;
+  margin-left: 30px;
+  font-size: 40px;
+  color: var(--mid-blue);
+  text-align: right;
+}
+
+.score {
+  position: relative;
+  left: 235px;
+  font-size: 40px;
+  color: var(--pink);
+  text-align: right;
+}
+
+#score1 {
+  position: relative;
+  top: -10px;
+  font-size: 65px;
+  color: var(--mid-blue)
+}
+
+#timer {
+  margin-top: -10px;
+  margin-right: 35px;
+  font-size: 65px;
+  color: var(--pink);
+}
+
+.buttons img {
+  position: relative;
+  top: -100px;   
+  left: 300px;
+  width: 85px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  z-index: 10;
+}
+
+.buttons img:hover {
+  transform: scale(1.1);
+}
+
+.helper {
+  position: absolute;
+  left: 660px;
+  text-align: center; 
+  font-size: 12px;
+  color: var(--mid-blue);
+  cursor: pointer;
+}
+
+.helper img {
+  width: 430px;
+  position: relative;
+  top: 325px;              
+  left: 180px;   
+  transition: transform 0.3s;
+}
+
+.helper:hover img {
+  transform: scale(1.05);
+}
+
+
+
+  

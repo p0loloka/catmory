@@ -1,0 +1,90 @@
+:root {
+  --dark-blue: #162059;
+  --mid-blue: #1a2873;
+  --pink: #f28db2;
+  --light-bg: #d8e0f2;
+  --game-bg: #f2f2f2;
+}
+
+@font-face {
+  font-family: 'CatFont';
+  src: url('assets/fonts/TeletactileRus.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-bg);
+  font-family: 'CatFont', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.window {
+  width: 1250px;
+  height: 850px;
+  background-color: var(--light-bg);
+  border: 2px solid var(--mid-blue);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.window-bar {
+  height: 30px;
+  background-color: var(--mid-blue);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.window-buttons img {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 650px; 
+  margin-top: -50px;
+  margin-bottom: 10px;
+}
+
+.start-button {
+  width: 480px; 
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
+}
+
+.start-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--pink);
+}
+
+.hint-text {
+  font-size: 20px;
+  color: var(--mid-blue);
+}

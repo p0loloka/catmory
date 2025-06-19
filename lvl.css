@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'CatFont';
+  src: url('assets/fonts/TeletactileRus.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --dark-blue: #162059;
+  --mid-blue: #1a2873;
+  --pink: #f28db2;
+  --light-bg: #d8e0f2;
+  --game-bg: #f2f2f2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--mid-blue);
+  font-family: 'CatFont', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-window {
+  width: 1250px;
+  height: 850px;
+  background-color: var(--mid-blue);
+  border: 2px solid var(--dark-blue);
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+
+.window-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-blue);
+  height: 30px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.title {
+  color: white;
+  font-size: 20px;
+}
+
+.window-buttons img {
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  height: calc(100% - 30px); /* вычесть панель */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.difficulty-box {
+  width: 800px;
+  height: 465px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-text {
+  font-size: 45px;
+  color: var(--light-bg);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.subtitle-text {
+  font-size: 30px;
+  color: var(--pink);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.level-buttons {
+  display: flex;
+  gap: 27px;
+  margin-bottom: 25px;
+}
+
+.level-button {
+  width: 300px; 
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
+}
+
+.level-button:hover {
+    transform: scale(1.05);
+  box-shadow: 0 0 20px var(--pink);
+}
+
+.exit-text {
+  font-size: 23px;
+  color: var(--game-bg);
+  text-align: center;
+}

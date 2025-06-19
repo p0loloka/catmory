@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Catmory</title>
+  <link rel="stylesheet" href="style_mainscreen.css">
+</head>
+<body>
+  <div class="window">
+    <div class="window-bar">
+      <span class="window-title">CATMORY</span>
+      <div class="window-buttons">
+        <img src="assets/img/ui/minimize.png" alt="Свернуть">
+        <img src="assets/img/ui/close.png" alt="Закрыть">
+      </div>
+    </div>
+
+    <div class="content">
+      <img src="assets/img/ui/лого.png" alt="Catmory logo" class="logo">
+      <a href="level.html">
+  <img src="assets/img/ui/кнопки.png" alt="Start button" class="start-button">
+</a>
+
+      <p class="hint-text">ИЛИ НАЖМИТЕ ENTER</p>
+    </div>
+  </div>
+</body>
+<script>
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      window.location.href = 'level.html';
+    }
+  });
+</script>
+</html>
+
+

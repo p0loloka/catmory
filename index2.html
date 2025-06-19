@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Catmory</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+  <!-- window bar -->
+  <div class="window-bar">
+    <span>CATMORY</span>
+    <div class="window-controls">
+      <img src="assets/img/ui/minimize.png" alt="Minimize">
+      <img src="assets/img/ui/close.png" alt="Close">
+    </div>
+  </div>
+
+  <!-- игровое поле -->
+  <div class="game-container">
+    <!-- игровая сетка -->
+    <div class="card-grid" id="card-grid">
+      <!-- Карточки создаются динамически через JS -->
+    </div>
+
+    <!-- панель справа -->
+    <div class="side-panel">
+      <div class="timer-block">
+        <span>ОСТАЛОСЬ:</span>
+        <div id="timer">02:00</div>
+      </div>
+
+      <div class="buttons">
+        <img id="hint-btn" src="assets/img/подсказка.png" alt="Hint" class="action-btn">
+        <img id="exit-btn" src="assets/img/выход.png" alt="Exit" class="action-btn">
+      </div>
+
+      <div class="score">
+        <span>ОЧКИ:</span>
+        <div id="score1">0</div>
+      </div>
+
+      <div class="helper">
+        <div class="helper-content"></div>
+        <img src="assets/img/китик2.png" alt="Helper Cat" id="helper-cat">
+        <p>НАЖМИ НА МЕНЯ, ЧТОБЫ<br>УЗНАТЬ ПРАВИЛА</p>
+      </div>
+    </div>
+  </div>
+
+<script src="script2.js"></script>
+</body>
+</html>

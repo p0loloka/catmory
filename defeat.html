@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Победа</title>
+  <link rel="stylesheet" href="lvl.css">
+</head>
+<body>
+  <div class="game-window">
+    <div class="window-bar">
+      <div class="title">CATMORY</div>
+      <div class="window-buttons">
+        <img src="assets/img/ui/minimize.png" alt="Minimize">
+        <img src="assets/img/ui/close.png" alt="Close">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="difficulty-box">
+        <h1 class="title-text">БЛИН! НЕ ПОЛУЧИЛОСЬ!</h1>
+        <p class="subtitle-text">ХОЧЕШЬ ПОПРОБОВАТЬ ЕЩЁ?</p>
+
+        <div class="level-buttons">
+          <img id="yes-btn" src="assets/img/ui/4 х 41.png" alt="Да" class="level-button">
+          <img id="no-btn" src="assets/img/ui/5 х 51.png" alt="Нет" class="level-button">
+        </div>
+
+        <p class="exit-text">НАЖМИТЕ ESC, ЧТОБЫ ВЫЙТИ</p>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const yesBtn = document.getElementById('yes-btn');
+    const noBtn = document.getElementById('no-btn');
+
+    if (yesBtn) {
+      yesBtn.addEventListener('click', () => {
+        window.location.href = 'level.html';
+      });
+    }
+
+    if (noBtn) {
+      noBtn.addEventListener('click', () => {
+        window.location.href = 'index_mainscreen.html';
+      });
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      window.location.href = 'index_mainscreen.html';
+    }
+  });
+</script>
+</html>
