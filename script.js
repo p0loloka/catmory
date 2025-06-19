@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Логика переворота и подсчета
 function flipCard(card) {
   if (lockBoard || card.classList.contains('flipped')) return;
 
@@ -62,12 +63,12 @@ function checkMatch() {
     scoreEl.textContent = score;
     flippedCards = [];
 
-    // все ли карточки перевернуты
+    // Проверка: все ли карточки перевернуты
     const allCards = document.querySelectorAll('.card');
     const allFlipped = Array.from(allCards).every(card => card.classList.contains('flipped'));
 
     if (allFlipped) {
-      clearInterval(countdown); 
+      clearInterval(countdown); // Останавливаем таймер
       endGame();
     }
 
@@ -110,6 +111,7 @@ hintBtn.addEventListener('click', () => {
 
   setTimeout(() => {
     allCards.forEach(card => {
+      // Убираем класс 'flipped' только у тех, кто НЕ был открыт ДО подсказки
       if (!alreadyFlipped.includes(card)) {
         card.classList.remove('flipped');
       }
@@ -136,15 +138,15 @@ helperCat.addEventListener('click', () => {
 
 // Победа/поражение
 function endGame() {
-    if (gameEnded) return;
-    gameEnded = true;
+  if (gameEnded) return;
+  gameEnded = true;
 
-    const totalPossible = document.querySelectorAll('.card').length / 2 * 10;
+  const totalPossible = document.querySelectorAll('.card').length / 2 * 10;
 
-    if (score >= totalPossible / 2) {
-      window.location.href = 'victory.html';
-    } else {
-      window.location.href = 'defeat.html';
-    }
+  if (score >= totalPossible / 2) {
+    window.location.href = 'victory.html';
+  } else {
+    window.location.href = 'defeat.html';
   }
+}
 });
