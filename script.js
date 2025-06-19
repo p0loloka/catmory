@@ -147,6 +147,3 @@ function endGame() {
     window.location.href = 'defeat.html';
   }
 }
-
-});
-
