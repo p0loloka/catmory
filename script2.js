@@ -145,7 +145,7 @@ hintBtn.addEventListener('click', () => {
 });
 // Выход
 exitBtn.addEventListener('click', () => {
-  window.location.href = 'index_mainscreen.html';
+  window.location.href = 'index.html';
 });
 
 // Хелпер
