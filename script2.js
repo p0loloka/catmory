@@ -4,7 +4,7 @@ const hintBtn = document.getElementById('hint-btn');
 const exitBtn = document.getElementById('exit-btn');
 const helperCat = document.getElementById('helper-cat');
 
-let timer = 90;
+let timer = 180;
 let score = 0;
 let flippedCards = [];
 let lockBoard = false;
@@ -136,7 +136,7 @@ hintBtn.addEventListener('click', () => {
         card.classList.remove('flipped');
       }
     });
-  }, 1000);
+  }, 2000);
 
   if (hintsLeft === 0) {
     hintBtn.style.pointerEvents = 'none';
