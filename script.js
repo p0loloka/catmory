@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Логика переворота и подсчета
 function flipCard(card) {
   if (lockBoard || card.classList.contains('flipped')) return;
 
@@ -63,7 +62,7 @@ function checkMatch() {
     scoreEl.textContent = score;
     flippedCards = [];
 
-    // Проверка: все ли карточки перевернуты
+    // все ли карточки перевернуты
     const allCards = document.querySelectorAll('.card');
     const allFlipped = Array.from(allCards).every(card => card.classList.contains('flipped'));
 
@@ -111,7 +110,7 @@ hintBtn.addEventListener('click', () => {
 
   setTimeout(() => {
     allCards.forEach(card => {
-      // Убираем класс 'flipped' только у тех, кто НЕ был открыт ДО подсказки
+
       if (!alreadyFlipped.includes(card)) {
         card.classList.remove('flipped');
       }
@@ -130,7 +129,7 @@ exitBtn.addEventListener('click', () => {
   window.location.href = 'index.html';
 });
 
-// Хелпер
+// Помошник
 helperCat.addEventListener('click', () => {
   window.location.href = 'rules.html';
 });
